@@ -1,0 +1,67 @@
+package com.guigu.generator;
+
+import java.util.List;
+
+import org.junit.Test;
+
+import com.guigu.mybatis.model.Items;
+import com.guigu.mybatis.model.ItemsExample;
+
+/**       
+ * 项目名称：GeneratorSqlMapConfigTest   
+ * 类全名:com.guigu.generator.MyBatisTest  
+ * 类描述：     
+ * 创建人：刘老师   
+ * 创建时间：2017-8-29 上午10:16:54    
+ * 修改备注：  
+ * @version  jdk1.6  
+ * 
+ * Copyright (c) 2017, 980991634@qq.com All Rights Reserved.     
+ */
+public class MyBatisTest {
+    
+    public void testUpdateByPrimaryKey(){
+        //首先对所有的字段更新 查询出需要更新的数据
+//        Items items=itemsMapper.selectByPrimaryKey(1);
+        //设置更新的内容
+//        items.setName("水杯");
+//        itemsMapper.updateByPrimaryKey(items);
+        
+    }
+    
+    public void testInsert(){
+        //构建items即可
+        Items items=new Items();
+        items.setName("手机");
+        items.setPrice(9999f);
+        
+//        itemsMapper.insert(items);
+    }
+    
+    
+    @Test
+    public void testSelectByPrimayKey(){
+//        Items items =itemsMapper.selectByPrimaryKey(1);
+//        System.out.println(items);
+    }
+    
+    
+    @Test
+    public void testSeletByExample(){
+        
+        ItemsExample itemsExample =new ItemsExample();
+        
+        //通过criteria构造查询条件
+        ItemsExample.Criteria criteria =itemsExample.createCriteria();
+        
+        //设置查询条件
+        criteria.andNameEqualTo("笔记本3");
+        //可能返回多条记录'
+        
+//        List<Items> list =itemsMapper.selectByExample(itemsExample);
+//           System.out.println(list);
+        
+    }
+}
+
+
